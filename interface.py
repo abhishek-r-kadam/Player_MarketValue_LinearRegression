@@ -31,4 +31,4 @@ def predict():
     
     return jsonify({"Predicted Market value":prediction_result})
 
-app.run()
+app.run(debug = True)
