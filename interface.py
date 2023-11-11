@@ -1,11 +1,11 @@
-from flask import Flask,request,jsonify
+from flask import Flask,request,jsonify,render_template
 from project_app.utils import MarketValuePredict
 
 app = Flask(__name__)
 
 @app.route("/")
 def home_api():
-    return "Predict Players Market value"
+    return render_template("index.html")
 
 @app.route("/predict")
 def predict():
